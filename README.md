@@ -23,10 +23,10 @@ virtualized via VMware. The "Full stack" solution involves the deployment of fou
   storage plugin that supports snapshots - however, to leverage incremental backups you must use PX Store. PX Backup supports objects level backups and backup destinations of S3 
   in AWS/GCP and on-premises and also Azure blob storage. Further information is provided in the [Portworx PX Backup documentation](https://portworx.com/products/px-backup/).
   
-- px_autopilot (coming soon - work in progress) module for configuring PX-Autopilot and rules for PX-Autopilot. PX-Autopilot polls prometheus for events that indicate that
-  persistent volumes or volume pools are running out of spare storage capacity, it will then expand persistent volumes and / or volume pools based on whatever PX-Autopilot rules 
-  have been created. PX-Autopilot is available with Portworx essentials at no extra cost with volume expansion capabilities, PX-Autopilot volume *pool* expansion capabilities are
-  only available with Portworx Enterprise.
+- px_autopilot (coming soon - work in progress) module for configuring PX-Autopilot, PX-Autopilot polls prometheus for events that indicate that persistent volumes or volume
+  pools are running out of spare storage capacity, it will then expand persistent volumes and / or volume pools based on whatever PX-Autopilot rules  have been created.
+  PX-Autopilot is available with Portworx essentials at no extra cost with volume expansion capabilities, PX-Autopilot volume *pool* expansion capabilities are only available
+  with Portworx Enterprise.
   
 - [big_data_cluster](https://github.com/PureStorage-OpenConnect/Arc-PX-VMware-Faststart/blob/main/azure_data_services/modules/big_data_cluster/README.md) module for deploying
   a big data cluster to a kubernetes cluster.
