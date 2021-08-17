@@ -51,6 +51,11 @@ terraform destroy -target=module.px_store --auto-approve
 
 <img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/PureStorage-OpenConnect/arc-px-vmware-faststart/blob/main/images/px_store/px5.PNG?raw=true">
 
+**Note:** 
+- The use of PX-Security mandates that Portworx is installed with the CSI option
+- The use of PX-Backup mandates that Portworx is installed with Stork
+- Installing Portworx with the Monitoring option also installs many of the components (Prometheus etc) required by PX-Autopilot, i.e. it allows you to get PX-Autopilot up and running faster.
+
 7. Accept the agreement for using Portworx
 
 <img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/PureStorage-OpenConnect/arc-px-vmware-faststart/blob/main/images/px_store/px6.PNG?raw=true">
@@ -72,7 +77,10 @@ The minimum set of variables that need to be configured consists of those with n
 | px_spec                     | string    | URL for Portworx spec YAML manifest file                            |        Y        | **No default value**            |
 | use_stork                   | boolean   | Determines whether the storage aware schedule should be used       |        Y        | true                            |
 
-**Note:** Stork is not relevant when shared SAN type storage is in use.
+**Note:** that pod / persistent volume co-location capabilities of Stork are primarily intended to be of use when:
+
+- hyper-converged infrastructure is used
+- the Kubernetes cluster hosting the storage cluster has worker nodes in different data centers or public cloud availability zones
 
 # Known Issues / Limitations
 
