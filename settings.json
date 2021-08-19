@@ -1,0 +1,8 @@
+{
+    "id": "Arc-PX-VMware-Faststart",
+    "name": "Azure Arc-enabled Data Services FastStart",
+    "filter": "virtualization microsoft",
+    "image": "http://code.purestorage.com/images/arcds.png",
+    "featured": 0,
+    "priority": 1
+}
